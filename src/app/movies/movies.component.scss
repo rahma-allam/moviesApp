@@ -1,0 +1,32 @@
+$bgColor:#15131f;
+$textColor:#b6b7b9;
+$starColor:#fece50;
+$fontFamily:"segoe ui" !important;
+$backgroundGraidiant:linear-gradient(135deg,#f09819 0%,#ef8128 34%, #ec474c 64%,#eb325a 2%);
+@mixin boxShadwo($x, $y, $b, $color) 
+{
+    -webkit-box-shadow: $x $y $b $color;
+    -moz-box-shadow: $x $y $b $color;
+    -ms-box-shadow: $x $y $b $color;
+    -o-box-shadow: $x $y $b $color;
+    box-shadow: $x $y $b $color;  
+};
+
+.container-fluid{
+    background-color: $bgColor;
+    }
+.movie-card{
+    @include boxShadwo(0,0,20px,black);
+    color: $textColor;
+    position: relative;
+}
+.vote{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    padding: 10px;
+    background: $backgroundGraidiant;
+}
+i{
+    color: $starColor;
+}
