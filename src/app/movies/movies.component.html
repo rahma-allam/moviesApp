@@ -3,7 +3,7 @@
         <div class="container py-5">
                 <input class="form-control"  [(ngModel)]="term" placeholder="Search"/>
             </div>
-    <div class="row" >
+        <div class="row" >
         <div class="col-md-6" *ngFor="let movie of allMovies|search:term">
             <div class="movie-card my-2">
                 <div class="row">
@@ -28,4 +28,5 @@
             </div>
         </div>
     </div>
+   
 </div>

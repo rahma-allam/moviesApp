@@ -8,16 +8,36 @@ import { MoviesService } from '../movies.service';
 })
 export class MoviesComponent implements OnInit {
 
+ 
+  allMovies:string[];
+  
+
   constructor(_moviesService:MoviesService) {
-   _moviesService.getMovies().subscribe(
-     data => this.allMovies=data.results
-   )
+ 
+ 
+   _moviesService.getMovies(1).subscribe(
+    data => this.allMovies=data.results
+  
+   ) 
+
    }
 
-  allMovies:string[];
-  term:any;
-  
+
   ngOnInit() {
+
+  /*  let btn =document.getElementsByClassName("btn");
+    for(var i=0 ; i <btn.length ; i++)
+    {
+        btn[i].addEventListener("click" , function(e){
+        let term=e.target.innerText;
+        console.log(term);
+        _moviesService.getMovies(term).subscribe(
+          data => this.allMovies=data.results
+        
+         ) 
+         
+        })
+    }*/     
   }
 
 }
